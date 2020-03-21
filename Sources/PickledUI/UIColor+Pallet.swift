@@ -26,10 +26,7 @@ public extension UIColor {
         /// Gets the color of the attribute
         /// - Important: defaults to default color
         public var color: UIColor {
-            if #available(iOS 11.0, *) {
-                return UIColor(named: self.rawValue) ?? self.defaultColor
-            }
-            fatalError()
+            return UIColor(named: self.rawValue) ?? self.defaultColor
         }
     }
 }
