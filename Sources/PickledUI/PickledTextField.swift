@@ -8,7 +8,7 @@
 
 #if !os(macOS)
 import UIKit
-open class PickledTextField: UITextField, Initializing {
+open class PickledTextField: UITextField {
 
     override init(frame: CGRect) {
         super.init(frame: frame)

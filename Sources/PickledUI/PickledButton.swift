@@ -7,7 +7,7 @@
 
 #if !os(macOS)
 import UIKit
-open class PickledButton: UIButton, Initializing {
+open class PickledButton: UIButton {
 
     override open var isEnabled: Bool {
         didSet {

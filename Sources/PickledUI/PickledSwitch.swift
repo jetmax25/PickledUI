@@ -7,7 +7,7 @@
 
 #if !os(macOS)
 import UIKit
-open class PickledSwitch: UISwitch, Initializing {
+open class PickledSwitch: UISwitch {
 
     override open var isEnabled: Bool {
         didSet {

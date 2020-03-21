@@ -8,7 +8,7 @@
 #if !os(macOS)
 import UIKit
 
-open class PickledSegmentedControl: UISegmentedControl, Initializing {
+open class PickledSegmentedControl: UISegmentedControl {
 
     override open var isEnabled: Bool {
         didSet {

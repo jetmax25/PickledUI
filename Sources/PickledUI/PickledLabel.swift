@@ -8,7 +8,7 @@
 #if !os(macOS)
 import UIKit
 
-open class PickledLabel: UILabel, Initializing {
+open class PickledLabel: UILabel {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
