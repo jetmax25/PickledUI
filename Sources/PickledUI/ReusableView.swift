@@ -9,7 +9,7 @@
 import UIKit
 /// Class that is easily reusable from a nib. Must be named same .swift and .xib, takes care of the rest
 open class ReusableView: UIView {
-    public static var nibName: String {
+    open var nibName: String {
         return String(describing: self)
     }
     
@@ -31,7 +31,7 @@ open class ReusableView: UIView {
         loadNibContent()
     }
     
-    public var nib: UINib {
+    open var nib: UINib {
         return UINib(nibName: String(describing: type(of: self)), bundle: Bundle(for: type(of: self)))
     }
     
