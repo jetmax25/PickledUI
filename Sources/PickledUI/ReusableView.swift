@@ -32,7 +32,7 @@ open class ReusableView: UIView {
     }
     
     open var nib: UINib {
-        return UINib(nibName: String(describing: type(of: self)), bundle: Bundle(for: type(of: self)))
+        return UINib(nibName: self.nibName, bundle: Bundle(for: type(of: self)))
     }
     
     func instantiateFromNib() -> UIView? {
@@ -46,6 +46,7 @@ open class ReusableView: UIView {
         }
         view.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(view)
+        self.sendSubviewToBack(view)
         let views = ["view": view]
         let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[view]-0-|", options: .alignAllLastBaseline, metrics: nil, views: views)
         let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[view]-0-|", options: .alignAllLastBaseline, metrics: nil, views: views)
