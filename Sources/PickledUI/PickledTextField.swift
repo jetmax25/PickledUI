@@ -5,7 +5,6 @@
 //  Created by Michael Isasi on 3/21/20.
 //
 
-
 #if !os(macOS)
 import UIKit
 open class PickledTextField: UITextField {
